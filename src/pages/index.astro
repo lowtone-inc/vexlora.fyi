@@ -1,0 +1,154 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import PostCard from '@/components/PostCard.astro';
+import PostGrid from '@/components/PostGrid.astro';
+import TagList from '@/components/TagList.astro';
+import { SITE } from '@/config';
+import { getFeaturedPosts, getPosts, getRecentPosts, getTagGroups } from '@/lib/posts';
+import { withBase } from '@/lib/url';
+
+const [featured] = await getFeaturedPosts(1);
+const recent = await getRecentPosts(6, featured ? [featured] : []);
+const totalPosts = (await getPosts()).length;
+const allTagGroups = await getTagGroups();
+const tagGroups = allTagGroups.slice(0, 12);
+
+const stats = [
+  { value: totalPosts, label: 'Posts' },
+  { value: allTagGroups.length, label: 'Tags' },
+  { value: new Date().getFullYear(), label: 'Season' },
+];
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="kicker">Official Log of {SITE.author}</p>
+      <h1 class="display">
+        Play hard.<br /><span class="accent">Write harder.</span>
+      </h1>
+      <p class="desc">{SITE.description}</p>
+      <div class="actions">
+        <a href={withBase('/blog/')} class="btn primary">Read the blog</a>
+        <a href={withBase('/about/')} class="btn">About</a>
+      </div>
+      <dl class="stats">
+        {
+          stats.map(({ value, label }) => (
+            <div>
+              <dt>{label}</dt>
+              <dd class="display">{value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+    <div class="stripe-bar"></div>
+  </section>
+
+  {
+    featured && (
+      <section class="container block">
+        <SectionTitle label="Featured" title="Highlight" />
+        <PostCard post={featured} variant="hero" />
+      </section>
+    )
+  }
+
+  <section class="container block">
+    <SectionTitle label="Latest" title="Recent Posts" />
+    <PostGrid posts={recent} />
+  </section>
+
+  {
+    tagGroups.length > 0 && (
+      <section class="container block">
+        <SectionTitle label="Explore" title="Tags" />
+        <TagList
+          tags={tagGroups.map((g) => g.name)}
+          counts={Object.fromEntries(tagGroups.map((g) => [g.name, g.posts.length]))}
+        />
+      </section>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(115deg, transparent 62%, var(--c-accent) 62% 63%, transparent 63%),
+      linear-gradient(115deg, transparent 66%, var(--c-accent-dim) 66%),
+      radial-gradient(circle at 10% 0%, rgba(255, 107, 0, 0.18), transparent 50%),
+      var(--c-bg);
+  }
+  .hero-inner {
+    padding-block: clamp(64px, 12vw, 140px) 64px;
+  }
+  .kicker {
+    margin: 0 0 16px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(3.6rem, 13vw, 9rem);
+  }
+  .desc {
+    max-width: 40ch;
+    margin: 24px 0 0;
+    color: var(--c-muted);
+    font-size: 1.1rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .btn {
+    padding: 12px 26px;
+    border: 2px solid var(--c-text);
+    font-weight: 900;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .btn:hover {
+    background: var(--c-text);
+    color: #000;
+  }
+  .btn.primary {
+    background: var(--c-accent);
+    border-color: var(--c-accent);
+    color: #000;
+  }
+  .btn.primary:hover {
+    background: var(--c-accent-soft);
+    border-color: var(--c-accent-soft);
+  }
+  .stats {
+    display: flex;
+    gap: clamp(24px, 6vw, 64px);
+    margin: 56px 0 0;
+  }
+  .stats dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+  }
+  .stats dd {
+    margin: 0;
+    font-size: 3rem;
+  }
+  .block {
+    padding-top: 80px;
+  }
+</style>

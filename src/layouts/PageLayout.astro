@@ -1,0 +1,27 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+
+export interface Props {
+  title: string;
+  label?: string;
+  description?: string;
+}
+
+const { title, label, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="container page">
+    <SectionTitle level="h1" label={label} title={title}>
+      {description && <p>{description}</p>}
+    </SectionTitle>
+    <slot />
+  </section>
+</BaseLayout>
+
+<style>
+  .page {
+    padding-top: 64px;
+  }
+</style>

@@ -1,0 +1,51 @@
+---
+import type { Page } from 'astro';
+
+export interface Props {
+  page: Pick<Page, 'currentPage' | 'lastPage' | 'url'>;
+}
+
+const { currentPage, lastPage, url } = Astro.props.page;
+---
+
+{
+  lastPage > 1 && (
+    <nav class="pagination" aria-label="페이지 이동">
+      <a href={url.prev} class:list={{ disabled: !url.prev }}>← Prev</a>
+      <span class="display">
+        <span class="accent">{String(currentPage).padStart(2, '0')}</span> / {String(lastPage).padStart(2, '0')}
+      </span>
+      <a href={url.next} class:list={{ disabled: !url.next }}>Next →</a>
+    </nav>
+  )
+}
+
+<style>
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 48px;
+  }
+  .display {
+    font-size: 1.8rem;
+  }
+  a {
+    padding: 8px 18px;
+    border: 1px solid var(--c-border);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  a:hover {
+    background: var(--c-accent);
+    border-color: var(--c-accent);
+    color: #000;
+  }
+  .disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+</style>

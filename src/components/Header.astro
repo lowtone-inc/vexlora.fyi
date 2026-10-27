@@ -1,0 +1,86 @@
+---
+import { NAV_LINKS, SITE } from '@/config';
+import { isActive, withBase } from '@/lib/url';
+
+const path = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="container inner">
+    <a href={withBase('/')} class="logo display">
+      <span class="mark" aria-hidden="true"></span>{SITE.title}
+    </a>
+    <nav>
+      <ul>
+        {
+          NAV_LINKS.map(({ href, label }) => (
+            <li>
+              <a href={withBase(href)} class:list={{ active: isActive(path, href) }}>
+                {label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(10, 10, 11, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--c-border);
+  }
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+  }
+  .mark {
+    width: 18px;
+    height: 18px;
+    background: var(--c-accent);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 60% 100%, 0 100%);
+  }
+  ul {
+    display: flex;
+    gap: clamp(12px, 3vw, 28px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  nav a {
+    position: relative;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c-muted);
+    transition: color 0.2s;
+  }
+  nav a:hover,
+  nav a.active {
+    color: var(--c-text);
+  }
+  nav a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -21px;
+    height: 3px;
+    background: var(--c-accent);
+  }
+</style>

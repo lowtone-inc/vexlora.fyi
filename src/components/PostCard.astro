@@ -1,0 +1,101 @@
+---
+import PostMeta from './PostMeta.astro';
+import TagList from './TagList.astro';
+import { postUrl } from '@/lib/url';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+  variant?: 'default' | 'hero';
+}
+
+const { post, variant = 'default' } = Astro.props;
+const { title, description, tags } = post.data;
+---
+
+<article class:list={['card', variant]}>
+  <a href={postUrl(post.id)} class="cover" aria-label={title}>
+    <span class="cover-text display">{post.data.category}</span>
+  </a>
+  <div class="body">
+    <PostMeta post={post} />
+    <h3><a href={postUrl(post.id)}>{title}</a></h3>
+    <p>{description}</p>
+    {tags.length > 0 && <TagList tags={tags} />}
+  </div>
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--c-accent);
+  }
+  .cover {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    aspect-ratio: 16 / 7;
+    padding: 16px 20px;
+    background:
+      linear-gradient(135deg, transparent 55%, var(--c-accent) 55% 62%, transparent 62%),
+      radial-gradient(circle at 85% 20%, var(--c-accent-dim), transparent 60%),
+      var(--c-surface-2);
+  }
+  .cover-text {
+    font-size: 2.6rem;
+    color: rgba(255, 255, 255, 0.08);
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding: 20px;
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  h3 a:hover {
+    color: var(--c-accent);
+  }
+  p {
+    flex: 1;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.92rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .hero .cover {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+  .hero .cover-text {
+    font-size: 5rem;
+  }
+  .hero h3 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+  @media (max-width: 760px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .hero .cover {
+      min-height: 180px;
+    }
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import { formatDate, isoDate, readingTime } from '@/lib/format';
+import type { Post } from '@/lib/posts';
+
+export interface Props {
+  post: Post;
+}
+
+const { data, body } = Astro.props.post;
+---
+
+<div class="meta">
+  <span class="category">{data.category}</span>
+  <time datetime={isoDate(data.pubDate)}>{formatDate(data.pubDate)}</time>
+  <span>{readingTime(body)}</span>
+</div>
+
+<style>
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--c-muted);
+  }
+  .category {
+    color: var(--c-accent);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+import { SITE, SOCIAL_LINKS } from '@/config';
+import { withBase } from '@/lib/url';
+
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="stripe-bar"></div>
+  <div class="container inner">
+    <p class="display brand">{SITE.title}<span class="accent">.</span></p>
+    <ul>
+      {SOCIAL_LINKS.map(({ href, label }) => <li><a href={withBase(href)}>{label}</a></li>)}
+    </ul>
+    <p class="copy">© {year} {SITE.author}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    margin-top: 96px;
+    background: var(--c-surface);
+  }
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-block: 40px;
+  }
+  .brand {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    color: var(--c-muted);
+    font-size: 0.9rem;
+  }
+  a:hover {
+    color: var(--c-accent);
+  }
+  .copy {
+    width: 100%;
+    margin: 0;
+    color: var(--c-muted);
+    font-size: 0.8rem;
+  }
+</style>

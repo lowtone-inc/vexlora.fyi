@@ -1,0 +1,70 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro';
+import { SITE } from '@/config';
+
+const profile = [
+  { key: 'Name', value: SITE.author },
+  { key: 'Role', value: 'Developer / Spectator' },
+  { key: 'Main', value: 'TypeScript, Astro, Coffee' },
+  { key: 'Base', value: 'Seoul' },
+];
+---
+
+<PageLayout title="About" label="Profile" description="이 블로그를 쓰는 사람">
+  <div class="about">
+    <dl class="card">
+      {
+        profile.map(({ key, value }) => (
+          <div>
+            <dt>{key}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <div class="prose">
+      <p>
+        경기를 보고, 코드를 짜고, 가끔 글을 씁니다. 이긴 날도 진 날도 기록해 두면 다음 시즌의 재료가
+        된다고 믿습니다.
+      </p>
+      <p>이 블로그는 Astro로 만들어졌고 GitHub Actions로 자동 배포됩니다.</p>
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .card {
+    margin: 0;
+    padding: 24px;
+    background: var(--c-surface);
+    border-top: 4px solid var(--c-accent);
+  }
+  .card div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--c-border);
+  }
+  dt {
+    color: var(--c-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  dd {
+    margin: 0;
+    font-weight: 700;
+  }
+  @media (max-width: 760px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

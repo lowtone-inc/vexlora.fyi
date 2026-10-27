@@ -1,0 +1,40 @@
+---
+export interface Props {
+  label?: string;
+  title: string;
+  level?: 'h1' | 'h2';
+}
+
+const { label, title, level: Heading = 'h2' } = Astro.props;
+---
+
+<div class="section-title">
+  {label && <span class="label">{label}</span>}
+  <Heading class="display">{title}</Heading>
+  <slot />
+</div>
+
+<style>
+  .section-title {
+    margin-bottom: 32px;
+  }
+  .label {
+    display: inline-block;
+    padding: 2px 10px;
+    margin-bottom: 8px;
+    background: var(--c-accent);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .display {
+    margin: 0;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+  }
+  .section-title :global(p) {
+    margin: 8px 0 0;
+    color: var(--c-muted);
+  }
+</style>
