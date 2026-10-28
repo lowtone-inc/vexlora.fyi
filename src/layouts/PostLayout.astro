@@ -13,10 +13,14 @@ export interface Props {
 }
 
 const { post, newer, older } = Astro.props;
-const { title, description, tags } = post.data;
+const { title, description, tags, pubDate, updatedDate } = post.data;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  article={{ publishedTime: pubDate, modifiedTime: updatedDate, tags }}
+>
   <article>
     <header class="post-hero">
       <div class="container">

@@ -5,6 +5,14 @@ export const SITE = {
   author: 'vexlora',
   locale: 'ko-KR',
   postsPerPage: 6,
+  // 글별 이미지가 없을 때 쓰는 공유 이미지 (public/ 기준 경로)
+  ogImage: '/og-default.png',
+} as const;
+
+// 서치콘솔 소유 확인 코드. 값이 있을 때만 meta 태그를 출력한다.
+export const SITE_VERIFICATION = {
+  google: '',
+  naver: '',
 } as const;
 
 export const NAV_LINKS = [
