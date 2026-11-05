@@ -10,15 +10,16 @@ export interface Props {
   description?: string;
   article?: ArticleMeta;
   noindex?: boolean;
+  image?: string;
 }
 
-const { title, description, article, noindex } = Astro.props;
+const { title, description, image, article, noindex } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={SITE.locale.split('-')[0]}>
   <head>
-    <BaseHead title={title} description={description} article={article} noindex={noindex} />
+    <BaseHead title={title} description={description} image={image} article={article} noindex={noindex} />
   </head>
   <body>
     <Header />
