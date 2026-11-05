@@ -17,20 +17,20 @@ draft: false
 처음엔 그냥 흔한 사주겠지 했는데\
 들어가자마자 사극 시작됨 ㅋㅋㅋ
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 능면승 풀이법](/images/neungmyeonseung-honest-review/01.jpg)
 
 자자형 받은 능면승 풀이법을 썼다는데\
 설정부터 뭔가 멋있어 ㅋㅋ\
 잘은 모르겠지만
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 여덟글자 오행](/images/neungmyeonseung-honest-review/02.jpg)
 
 결과 열면 여덟 글자 판이 뜨는데\
 솔직히 한자는 아직도 잘 모르겠음 ㅋㅋㅋ\
 암튼 저는 금2 목0 수3 토2 화1 이래요\
 목이 0이라 빨간색으로 떠있는데 왠지 서운함 ㅋㅋ
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 오행의 빈자리](/images/neungmyeonseung-honest-review/03.jpg)
 
 근데 목이 없는 게 뭔 뜻이냐면\
 계획표는 꼼꼼히 짜는데 첫걸음을 늦춘대요\
@@ -38,7 +38,7 @@ draft: false
 계획 세우는 건 젤 좋아하거등요\
 실행은… 음
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 색 방향 습관](/images/neungmyeonseung-honest-review/04.jpg)
 
 그래서 처방이 나와요✨\
 초록색 가까이 두고\
@@ -50,7 +50,7 @@ draft: false
 하나만!!\
 투두 잔뜩 쓰는 편인데 ㅠ
 
-<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+![능면승 마음이 무너지는 순간](/images/neungmyeonseung-honest-review/05.jpg)
 
 제일 신기했던 건 마음이 무너지는 순간\
 큰소리로 싸울 때보다\
