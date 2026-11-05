@@ -1,0 +1,80 @@
+---
+title: '사주마을 능면승 후기｜얼굴에 글자 새긴 스님이 읽어준 내 팔자✨ 온라인사주 솔직후기'
+description: '사주마을 능면승 솔직후기. 목이 0인 여덟 글자 판, 오행 처방, 11월·12월 달별 흐름까지 직접 받아본 내용 정리.'
+pubDate: 2026-11-05T14:00:00+09:00
+category: Daily
+tags: ['사주마을', '능면승', '능면승사주', '온라인사주', '사주추천', '사주솔직후기', '오행']
+featured: false
+draft: false
+---
+요즘 생각 많을 때마다\
+사주 찾아보는 사람 나야 나🙋‍♀️\
+원래도 갑갑하면 이런 거 좀 찾아봄 ㅋㅋㅋ
+
+그러다 인스타에 자꾸 뜨던\
+사주마을 능면승을 해봤어용
+
+처음엔 그냥 흔한 사주겠지 했는데\
+들어가자마자 사극 시작됨 ㅋㅋㅋ
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+자자형 받은 능면승 풀이법을 썼다는데\
+설정부터 뭔가 멋있어 ㅋㅋ\
+잘은 모르겠지만
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+결과 열면 여덟 글자 판이 뜨는데\
+솔직히 한자는 아직도 잘 모르겠음 ㅋㅋㅋ\
+암튼 저는 금2 목0 수3 토2 화1 이래요\
+목이 0이라 빨간색으로 떠있는데 왠지 서운함 ㅋㅋ
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+근데 목이 없는 게 뭔 뜻이냐면\
+계획표는 꼼꼼히 짜는데 첫걸음을 늦춘대요\
+오? 이거 좀 나 같은데\
+계획 세우는 건 젤 좋아하거등요\
+실행은… 음
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+그래서 처방이 나와요✨\
+초록색 가까이 두고\
+동쪽 보고 하루 첫 일 시작하래요\
+책상에 식물 두라는 것도 있었는데\
+식물 하나 들여야겠음 ㅋㅋ
+
+그리고 아침에 오늘 끝낼 일 하나만 적으래요\
+하나만!!\
+투두 잔뜩 쓰는 편인데 ㅠ
+
+<div class="img-placeholder" style="display:flex;align-items:center;justify-content:center;min-height:240px;margin:1.5rem 0;border:2px dashed currentColor;border-radius:12px;opacity:.45;font-size:.95rem;">이미지 들어갈 자리</div>
+
+제일 신기했던 건 마음이 무너지는 순간\
+큰소리로 싸울 때보다\
+상대가 앞에서 한 말이랑 뒤에 한 행동이 다를 때\
+더 흔들린대요\
+헐 이건 진짜 맞음… 신기했듬
+
+그리고 올해 달별 흐름도 나오는데\
+11월은 생각이 길어질 수 있으니\
+혼자 결론 내리지 말고 사람이랑 일정 맞추래요\
+지금이잖아 ㅠㅠㅠ
+
+12월은 연락이랑 약속 다시 확인하래요\
+연말 약속 벌써 꼬일 각인데 ㅋㅋㅋ\
+미리미리 확인해야지
+
+## 능면승 후기 총정리✨
+
+재미로 시작했는데 생각보다 몰입해서 한참 봄\
+읽을 게 진짜 많아서 시간 가는 줄 몰랐네
+
+물론 무조건 정답이라기보단\
+나를 돌아보는 참고용 정도로 보면 좋을 것 같아용
+
+<https://saju-maeul.kr/saju/app/monk/intro>
+
+\#사주마을 \#능면승 \#능면승사주 \#온라인사주 \#사주추천 \#사주솔직후기 \#오행
